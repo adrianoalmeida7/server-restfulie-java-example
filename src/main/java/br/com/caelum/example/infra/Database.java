@@ -25,6 +25,9 @@ public class Database {
 	}
 
 	public Item get(int id) {
+		if(id > this.items.size()) {
+			return null;
+		}
 		return this.items.get(id - 1);
 	}
 
